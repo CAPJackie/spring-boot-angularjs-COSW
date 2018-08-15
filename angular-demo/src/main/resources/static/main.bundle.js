@@ -84,7 +84,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_task_edit_page_task_edit_page_component__ = __webpack_require__("../../../../../src/app/pages/task-edit-page/task-edit-page.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_page_not_found_page_not_found_component__ = __webpack_require__("../../../../../src/app/pages/page-not-found/page-not-found.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__todo_service__ = __webpack_require__("../../../../../src/app/todo.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_todo_service__ = __webpack_require__("../../../../../src/app/services/todo.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -128,12 +128,32 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forRoot(ROUTES),
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* ReactiveFormsModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_10__todo_service__["a" /* TodoService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_10__services_todo_service__["a" /* TodoService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/model/todo.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Todo; });
+var Todo = (function () {
+    function Todo(description, priority, completed) {
+        if (priority === void 0) { priority = 1; }
+        if (completed === void 0) { completed = false; }
+        this.description = description;
+        this.completed = completed;
+        this.priority = priority;
+    }
+    return Todo;
+}());
+
+//# sourceMappingURL=todo.js.map
 
 /***/ }),
 
@@ -292,7 +312,7 @@ module.exports = "<div class=\"container\">\n  <h2>Edit Task</h2>\n  <form [form
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__todo_service__ = __webpack_require__("../../../../../src/app/todo.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_todo_service__ = __webpack_require__("../../../../../src/app/services/todo.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -331,7 +351,7 @@ TaskEditPageComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/pages/task-edit-page/task-edit-page.component.html"),
         styles: [__webpack_require__("../../../../../src/app/pages/task-edit-page/task-edit-page.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__todo_service__["a" /* TodoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__todo_service__["a" /* TodoService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_todo_service__["a" /* TodoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_todo_service__["a" /* TodoService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _c || Object])
 ], TaskEditPageComponent);
 
 var _a, _b, _c;
@@ -370,7 +390,7 @@ module.exports = "<h2>Tasks</h2>\n<table class=\"table table-bordered\">\n <thea
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaskListPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__todo_service__ = __webpack_require__("../../../../../src/app/todo.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_todo_service__ = __webpack_require__("../../../../../src/app/services/todo.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -398,7 +418,7 @@ TaskListPageComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/pages/task-list-page/task-list-page.component.html"),
         styles: [__webpack_require__("../../../../../src/app/pages/task-list-page/task-list-page.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__todo_service__["a" /* TodoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__todo_service__["a" /* TodoService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_todo_service__["a" /* TodoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_todo_service__["a" /* TodoService */]) === "function" && _a || Object])
 ], TaskListPageComponent);
 
 var _a;
@@ -406,13 +426,13 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/todo.service.ts":
+/***/ "../../../../../src/app/services/todo.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TodoService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__todo__ = __webpack_require__("../../../../../src/app/todo.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__model_todo__ = __webpack_require__("../../../../../src/app/model/todo.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -427,16 +447,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TodoService = (function () {
     function TodoService() {
         this.todos = [
-            new __WEBPACK_IMPORTED_MODULE_1__todo__["a" /* Todo */]('todo 1'),
-            new __WEBPACK_IMPORTED_MODULE_1__todo__["a" /* Todo */]('todo 2', 1, true),
-            new __WEBPACK_IMPORTED_MODULE_1__todo__["a" /* Todo */]('todo 3')
+            new __WEBPACK_IMPORTED_MODULE_1__model_todo__["a" /* Todo */]('todo 1'),
+            new __WEBPACK_IMPORTED_MODULE_1__model_todo__["a" /* Todo */]('todo 2', 1, true),
+            new __WEBPACK_IMPORTED_MODULE_1__model_todo__["a" /* Todo */]('todo 3')
         ];
     }
     TodoService.prototype.list = function () {
         return this.todos;
     };
     TodoService.prototype.create = function (description, priority, completed) {
-        this.todos.push(new __WEBPACK_IMPORTED_MODULE_1__todo__["a" /* Todo */](description, priority, completed));
+        this.todos.push(new __WEBPACK_IMPORTED_MODULE_1__model_todo__["a" /* Todo */](description, priority, completed));
     };
     return TodoService;
 }());
@@ -446,26 +466,6 @@ TodoService = __decorate([
 ], TodoService);
 
 //# sourceMappingURL=todo.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/todo.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Todo; });
-var Todo = (function () {
-    function Todo(description, priority, completed) {
-        if (priority === void 0) { priority = 1; }
-        if (completed === void 0) { completed = false; }
-        this.description = description;
-        this.completed = completed;
-        this.priority = priority;
-    }
-    return Todo;
-}());
-
-//# sourceMappingURL=todo.js.map
 
 /***/ }),
 
